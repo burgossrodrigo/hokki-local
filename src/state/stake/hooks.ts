@@ -12,9 +12,9 @@ import useGovernanceToken from '../../hooks/useGovernanceToken'
 import useTokensWithWethPrices from '../../hooks/useTokensWithWETHPrices'
 // import useBUSDPrice from '../../hooks/useBUSDPrice'
 import useFilterStakingRewardsInfo from '../../hooks/useFilterStakingRewardsInfo'
-// import getBlocksPerYear from '../../utils/getBlocksPerYear'
+import getBlocksPerYear from '../../utils/getBlocksPerYear'
 import calculateWethAdjustedTotalStakedAmount from '../../utils/calculateWethAdjustedTotalStakedAmount'
-// import calculateApr from '../../utils/calculateApr'
+import calculateApr from '../../utils/calculateApr'
 import validStakingInfo from '../../utils/validStakingInfo'
 import determineBaseToken from '../../utils/determineBaseToken'
 
@@ -39,7 +39,7 @@ export interface StakingInfo {
   // pool specific rewards per block
   poolRewardsPerBlock: TokenAmount
   // blocks generated per year
-  blocksPerYear: Fraction | undefined
+  blocksPerYear: JSBI
   // pool share vs all pools
   poolShare: Fraction
   // the percentage of rewards locked
@@ -84,9 +84,9 @@ export function useStakingInfo(active: boolean | undefined = undefined, pairToFi
   const weth = tokensWithPrices?.WETH?.token
   // const wethBusdPrice = useBUSDPrice(weth)
   const govToken = tokensWithPrices?.govToken?.token
-  // const govTokenWETHPrice = tokensWithPrices?.govToken?.price
+  const govTokenWETHPrice = tokensWithPrices?.govToken?.price
 
-  const blocksPerYear = undefined
+  const blocksPerYear = getBlocksPerYear(chainId)
 
   const pids = useMemo(() => masterInfo.map(({ pid }) => pid), [masterInfo])
   // console.log("Pids are", pids)
@@ -230,11 +230,11 @@ export function useStakingInfo(active: boolean | undefined = undefined, pairToFi
 
         const totalStakedAmountBUSD = undefined
 
-        // const apr = totalStakedAmountWETH
-        //   ? calculateApr(govTokenWETHPrice, baseBlockRewards, blocksPerYear, poolShare, totalStakedAmountWETH)
-        //   : undefined
+        const apr = totalStakedAmountWETH
+          ? calculateApr(govTokenWETHPrice, baseBlockRewards, blocksPerYear, poolShare, totalStakedAmountWETH)
+          : undefined
 
-        const apr = undefined
+        // const apr = undefined
 
         const stakingInfo = {
           pid: pid,
@@ -271,7 +271,7 @@ export function useStakingInfo(active: boolean | undefined = undefined, pairToFi
     tokensWithPrices,
     weth,
     govToken,
-    // govTokenWETHPrice,
+    govTokenWETHPrice,
     pids,
     poolInfos,
     userInfos,
