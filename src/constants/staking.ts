@@ -39,6 +39,11 @@ export const STAKING_REWARDS_INFO: {
     pid: 0,
     tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'Hokk/WETH'),
     active: true
+  },
+  {
+    pid: 1,
+    tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'HokkFi/WETH'),
+    active: true
   }
  ]
 }
