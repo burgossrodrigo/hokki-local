@@ -13,6 +13,7 @@ import { useActiveWeb3React } from '../../hooks'
 // import { JSBI } from '@uniswap/sdk'
 // import { BIG_INT_ZERO } from '../../constants'
 import { OutlineCard } from '../../components/Card'
+import useTotalCombinedTVL from '../../utils/useTotalCombinedTVL'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -54,6 +55,9 @@ export default function Earn() {
   // toggle copy if rewards are inactive
   const stakingRewardsExist = Boolean(typeof chainId === 'number' && (STAKING_REWARDS_INFO[chainId]?.length ?? 0) > 0)
 
+  const TVLs = useTotalCombinedTVL(stakingInfos)
+  console.log(TVLs.stakingPoolTVL)
+
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
@@ -88,7 +92,9 @@ export default function Earn() {
         <DataRow style={{ alignItems: 'baseline' }}>
           <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Participating pools</TYPE.mediumHeader>
           {/* <Countdown exactEnd={stakingInfos?.[0]?.periodFinish} /> */}
-          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Rewards coming soon</TYPE.mediumHeader>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>              
+          {TVLs?.stakingPoolTVL?TVLs.stakingPoolTVL.toSignificant(3, {groupSeparator: ','}): '-'} ETH
+                </TYPE.mediumHeader>
         </DataRow>
 
         <PoolSection>
