@@ -125,6 +125,8 @@ export default function AddLiquidity({
 
   const addTransaction = useTransactionAdder()
 
+
+
   async function onAdd() {
     if (!chainId || !library || !account) return
     const router = getRouterContract(chainId, library, account)
@@ -309,7 +311,9 @@ export default function AddLiquidity({
 
   const addIsUnsupported = useIsTransactionUnsupported(currencies?.CURRENCY_A, currencies?.CURRENCY_B)
 
+
   return (
+   
     <>
       <AppBody>
         <AddRemoveTabs creating={isCreate} adding={true} />
@@ -390,13 +394,13 @@ export default function AddLiquidity({
             />
             {currencies[Field.CURRENCY_A] && currencies[Field.CURRENCY_B] && pairState !== PairState.INVALID && (
               <>
-                <LightCard padding="0px" borderRadius={'20px'}>
-                  <RowBetween padding="1rem">
+                <LightCard padding="0px" border="0 !important">
+                  <RowBetween backgroundColor={theme.splitPanelTopBg + " !important"} padding="1rem" borderRadius={'20px 20px 0 0'}>
                     <TYPE.subHeader fontWeight={500} fontSize={14}>
                       {noLiquidity ? 'Initial prices' : 'Prices'} and pool share
                     </TYPE.subHeader>
                   </RowBetween>{' '}
-                  <LightCard padding="1rem" borderRadius={'20px'}>
+                  <LightCard backgroundColor={theme.splitPanelBottomBg + " !important"} padding={"1rem"} borderRadius={"0 0 20px 20px"} border={"0 !important"}>
                     <PoolPriceBar
                       currencies={currencies}
                       poolTokenPercentage={poolTokenPercentage}

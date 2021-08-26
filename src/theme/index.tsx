@@ -45,8 +45,8 @@ export function colors(darkMode: boolean): Colors {
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
     text2: darkMode ? '#CBC3C8' : '#695662',
-    text3: darkMode ? '#846C7B' : '#9B8894',
-    text4: darkMode ? '#695662' : '#CBC3C8',
+    text3: darkMode ? '#e6e6e6' : '#9B8894',
+    text4: darkMode ? '#e6e6e6' : '#CBC3C8', 
     text5: darkMode ? '#362C32' : '#F2EDF0',
 
     // backgrounds / greys 1D006B
@@ -58,6 +58,11 @@ export function colors(darkMode: boolean): Colors {
     bg5: darkMode ? '#846C78' : '#9B8894',
     bg6: darkMode ? '#070f34' : '#fff',
 
+    panelBorder: darkMode ? '#ffffff' : '#000000',
+
+    splitPanelTopBg: darkMode ? '#0d194a' : '#627eea',
+    splitPanelBottomBg: darkMode ? '#080e29' : '#d4ddff',
+    
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
