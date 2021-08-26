@@ -126,8 +126,8 @@ export default function PoolCard({ stakingInfo, isArchived }: { stakingInfo: Sta
           <TYPE.white> Total deposited </TYPE.white>
           <TYPE.white fontWeight={500}>
             <b>
-              {stakingInfo && stakingInfo.valueOfTotalStakedAmountInUsd
-                ? `$${stakingInfo.valueOfTotalStakedAmountInUsd.toFixed(0, { groupSeparator: ',' })}`
+              {stakingInfo && stakingInfo.valueOfTotalStakedAmountInWeth
+                ? `${stakingInfo.valueOfTotalStakedAmountInWeth.toFixed(8, { groupSeparator: ',' })} ETH`
                 : '-'}
             </b>
           </TYPE.white>
