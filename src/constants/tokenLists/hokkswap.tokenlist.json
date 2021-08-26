@@ -1,0 +1,167 @@
+{
+  "name": "Uniswap V2 Unsupported List",
+  "timestamp": "2021-05-04T20:47:02.923Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E/logo.png",
+  "keywords": ["kishuswap"],
+  "tokens": [{
+      "name": "Wrapped Ether",
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+    },
+    {
+      "name": "Hokkaidu Inu",
+      "address": "0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E",
+      "symbol": "HOKK",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://www.hokk.finance/static/img/hokk-mascot.png"
+    },
+    {
+      "name": "Hokkaidu Inu",
+      "address": "0xecCC05B5998A416E7AD8562176d4C62aB50f2c27",
+      "symbol": "HOKK",
+      "decimals": 9,
+      "chainId": 3,
+      "logoURI": "https://www.hokk.finance/static/img/hokk-mascot.png"
+    },
+    {
+      "name": "SHIBA INU",
+      "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
+      "symbol": "SHIB",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE/logo.png"
+    },
+       {
+      "name": "SpaceDawgs",
+      "address": "0x9f8eef61b1ad834b44c089dbf33eb854746a6bf9",
+      "symbol": "DAWGS",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://assets.website-files.com/609aed0ee031b1555d8def04/60a40a7c6e547112bbfd7cc3_favicon-32x32.png"
+    },      
+             
+              {
+      "name": "StarLink",
+      "address": "0x8e6cd950ad6ba651f6dd608dc70e5886b1aa6b24",
+      "symbol": "STARL",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/starlinktoken_32.png"
+    },   
+             
+    {
+      "name": "Fat Doge",
+      "address": "0x76851a93977bea9264c32255b6457882035c7501",
+      "symbol": "FOGE",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://i.ibb.co/ky4Bm6P/foge-32x32.png"
+    },
+    {
+      "name": "DOGE KILLER",
+      "address": "0x27c70cd1946795b66be9d954418546998b546634",
+      "symbol": "LEASH",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/dogekiller_32.png"
+    },
+    {
+      "name": "AKITA INU",
+      "address": "0x3301Ee63Fb29F863f2333Bd4466acb46CD8323E6",
+      "symbol": "AKITA",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/akitainu_32.png"
+    },
+    {
+      "name": "FEGtoken",
+      "address": "0x389999216860ab8e0175387a0c90e5c52522c945",
+      "symbol": "FEG",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/fegtoken_32.png"
+    },
+    {
+      "name": "hoge.finance",
+      "address": "0xfad45e47083e4607302aa43c65fb3106f1cd7607",
+      "symbol": "HOGE",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/hogefinance_32.png"
+    },
+    {
+      "name": "Cookie",
+      "address": "0xd3780b7fBc9540fB5908503cd78bA77c7FFa650B",
+      "symbol": "COOKIE",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://i.ibb.co/jVHr6kb/cookie2.png"
+    },
+    {
+      "name": "Koinu Inu",
+      "address": "0x9f3f332e3238a5123fc8c03fd213ed3ca7cddd46",
+      "symbol": "KOINU",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://koinuinu.finance/images/logo2.png"
+    },
+    {
+      "name": "Truebit",
+      "address": "0xf65b5c5104c4fafd4b709d9d60a185eae063276c",
+      "symbol": "TRU",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://etherscan.io/token/images/truebit_32.png"
+    },
+    {
+      "name": "EthereumMax",
+      "address": "0x15874d65e649880c2614e7a480cb7c9a55787ff6",
+      "symbol": "eMAX",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://assets.coingecko.com/coins/images/15540/small/e-Max-Logo-RGB-Icon-Std.png?1622443785"
+    },
+    {
+      "name": "Dai Stablecoin",
+      "address": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "symbol": "DAI",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+    },
+    {
+      "name": "Tether USD",
+      "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "symbol": "USDT",
+      "decimals": 6,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+    },
+    {
+      "name": "USDCoin",
+      "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    },
+    {
+      "name": "Wrapped BTC",
+      "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+    }
+  ]
+}
