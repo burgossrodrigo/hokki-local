@@ -29,6 +29,7 @@ import { usePair } from '../../data/Reserves'
 import usePrevious from '../../hooks/usePrevious'
 import useUSDCPrice from '../../utils/useUSDCPrice'
 import { BIG_INT_ZERO } from '../../constants'
+import useGovernanceToken from '../../hooks/useGovernanceToken'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -98,6 +99,7 @@ export default function Manage({
   const [currencyA, currencyB] = [useCurrency(currencyIdA), useCurrency(currencyIdB)]
   const tokenA = wrappedCurrency(currencyA ?? undefined, chainId)
   const tokenB = wrappedCurrency(currencyB ?? undefined, chainId)
+  const govToken = useGovernanceToken()
 
   const [, stakingTokenPair] = usePair(tokenA, tokenB)
   const stakingInfo = useStakingInfo(undefined, stakingTokenPair)?.[0]
@@ -175,14 +177,14 @@ export default function Manage({
         </PoolData>
         <PoolData>
           <AutoColumn gap="sm">
-            <TYPE.body style={{ margin: 0 }}>Pool Rate</TYPE.body>
+            <TYPE.body style={{ margin: 0 }}>Emission Rate</TYPE.body>
             <TYPE.body fontSize={24} fontWeight={500}>
-              {/* {stakingInfo?.active
-                ? stakingInfo?.totalRewardRate
-                    ?.multiply(BIG_INT_SECONDS_IN_WEEK)
-                    ?.toFixed(0, { groupSeparator: ',' }) ?? '-'
-                : '0'}
-              {' UNI / week'} */}
+            {stakingInfo
+                ? stakingInfo.active
+                  ? `${stakingInfo.poolRewardsPerBlock.toSignificant(4, { groupSeparator: ',' })} 
+                  ${govToken?.symbol} / block`
+                  : `0 ${govToken?.symbol} / block`
+                : '-'}
             </TYPE.body>
           </AutoColumn>
         </PoolData>
