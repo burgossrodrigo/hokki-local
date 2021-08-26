@@ -1,5 +1,6 @@
 import React from 'react'
 import { AutoColumn } from '../../components/Column'
+import { ButtonLight } from '../../components/Button'
 import styled from 'styled-components'
 import { useStakingInfo } from '../../state/stake/hooks'
 import { STAKING_REWARDS_INFO } from '../../constants/staking'
@@ -14,6 +15,8 @@ import { useActiveWeb3React } from '../../hooks'
 // import { BIG_INT_ZERO } from '../../constants'
 import { OutlineCard } from '../../components/Card'
 import useTotalCombinedTVL from '../../utils/useTotalCombinedTVL'
+import { useWalletModalToggle } from '../../state/application/hooks'
+
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -41,7 +44,9 @@ flex-direction: column;
 `
 
 export default function Earn() {
-  const { chainId } = useActiveWeb3React()
+  const { chainId, account } = useActiveWeb3React()
+  
+  const toggleWalletModal = useWalletModalToggle()
 
   // staking info for connected account
   const stakingInfos = useStakingInfo()
@@ -56,9 +61,9 @@ export default function Earn() {
   const stakingRewardsExist = Boolean(typeof chainId === 'number' && (STAKING_REWARDS_INFO[chainId]?.length ?? 0) > 0)
 
   const TVLs = useTotalCombinedTVL(stakingInfos)
-  console.log(TVLs.stakingPoolTVL)
-
+ 
   return (
+    
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
         <DataCard>
@@ -97,6 +102,10 @@ export default function Earn() {
                 </TYPE.mediumHeader>
         </DataRow>
 
+
+        {!account ? (
+          <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
+        ) : 
         <PoolSection>
           {stakingRewardsExist && stakingInfos?.length === 0 ? (
             <Loader style={{ margin: 'auto' }} />
@@ -111,6 +120,8 @@ export default function Earn() {
             })
           )}
         </PoolSection>
+      }
+
       </AutoColumn>
     </PageWrapper>
   )
