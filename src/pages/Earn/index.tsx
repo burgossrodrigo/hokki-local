@@ -7,7 +7,7 @@ import { STAKING_REWARDS_INFO } from '../../constants/staking'
 import { TYPE, ExternalLink } from '../../theme'
 import PoolCard from '../../components/earn/PoolCard'
 import { RowBetween } from '../../components/Row'
-import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
+import { CardSection, DataCard } from '../../components/earn/styled'
 // import { Countdown } from './Countdown'
 import Loader from '../../components/Loader'
 import { useActiveWeb3React } from '../../hooks'
@@ -67,8 +67,7 @@ export default function Earn() {
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
         <DataCard>
-          <CardBGImage />
-          <CardNoise />
+        
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
@@ -88,8 +87,7 @@ export default function Earn() {
               </ExternalLink>
             </AutoColumn>
           </CardSection>
-          <CardBGImage />
-          <CardNoise />
+         
         </DataCard>
       </TopSection>
 
