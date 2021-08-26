@@ -34,6 +34,14 @@
       "logoURI": "https://www.hokk.finance/static/img/hokk-mascot.png"
     },
     {
+      "name": "Hokk Finance",
+      "address": "0x927dE6686859E23745F03Aa0DFaE1783fE932393",
+      "symbol": "HOKKFI",
+      "decimals": 18,
+      "chainId": 3,
+      "logoURI": "https://www.hokk.finance/static/img/hokk-mascot.png"
+    },
+    {
       "name": "SHIBA INU",
       "address": "0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE",
       "symbol": "SHIB",
