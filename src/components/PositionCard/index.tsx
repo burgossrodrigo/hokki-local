@@ -13,8 +13,8 @@ import { ExternalLink, TYPE } from '../../theme'
 import { currencyId } from '../../utils/currencyId'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
 import { ButtonPrimary, ButtonSecondary, ButtonEmpty } from '../Button'
-import { transparentize } from 'polished'
-import { CardNoise } from '../earn/styled'
+//import { transparentize } from 'polished'
+//import { CardNoise } from '../earn/styled'
 
 import { useColor } from '../../hooks/useColor'
 
@@ -38,10 +38,10 @@ export const HoverCard = styled(Card)`
 `
 const StyledPositionCard = styled(LightCard)<{ bgColor: any }>`
   border: none;
-  background: ${({ theme, bgColor }) =>
-    `radial-gradient(91.85% 100% at 1.84% 0%, ${transparentize(0.8, bgColor)} 0%, ${theme.bg3} 100%) `};
+  background: #000;
   position: relative;
   overflow: hidden;
+  color: #fff;
 `
 
 interface PositionCardProps {
@@ -194,7 +194,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
 
   return (
     <StyledPositionCard border={border} bgColor={backgroundColor}>
-      <CardNoise />
+ 
       <AutoColumn gap="12px">
         <FixedHeightRow>
           <AutoRow gap="8px">
@@ -213,12 +213,12 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
               {showMore ? (
                 <>
                   Manage
-                  <ChevronUp size="20" style={{ marginLeft: '10px' }} />
+                  <ChevronUp size="20" style={{ marginLeft: '10px', color: '#fff', width: '30px' }} />
                 </>
               ) : (
                 <>
                   Manage
-                  <ChevronDown size="20" style={{ marginLeft: '10px' }} />
+                  <ChevronDown size="20" style={{ marginLeft: '10px', color: '#fff', width: '30px' }} />
                 </>
               )}
             </ButtonEmpty>
