@@ -45,8 +45,8 @@ export function colors(darkMode: boolean): Colors {
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
     text2: darkMode ? '#CBC3C8' : '#695662',
-    text3: darkMode ? '#846C7B' : '#9B8894',
-    text4: darkMode ? '#695662' : '#CBC3C8',
+    text3: darkMode ? '#e6e6e6' : '#9B8894',
+    text4: darkMode ? '#e6e6e6' : '#CBC3C8', 
     text5: darkMode ? '#362C32' : '#F2EDF0',
 
     // backgrounds / greys 1D006B
@@ -56,7 +56,13 @@ export function colors(darkMode: boolean): Colors {
     bg3: darkMode ? '#070f34' : '#ffaa4f',
     bg4: darkMode ? '#0071bd' : '#D9CED5',
     bg5: darkMode ? '#846C78' : '#9B8894',
+    bg6: darkMode ? '#070f34' : '#fff',
 
+    panelBorder: darkMode ? '#ffffff' : '#000000',
+
+    splitPanelTopBg: darkMode ? '#0d194a' : '#627eea',
+    splitPanelBottomBg: darkMode ? '#080e29' : '#d4ddff',
+    
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
@@ -69,8 +75,8 @@ export function colors(darkMode: boolean): Colors {
     //primary3: darkMode ? '#EA4D9E' : '#FF99CE',
     primary1: darkMode ? '#0071bc' : '#627eea',
     primary2: darkMode ? '#E73691' : '#026bb1',
-    primary3: darkMode ? '#EA4D9E' : '#FF99CE',
-    primary4: darkMode ? '#AD3774' : '#F6DDE8',
+    primary3: darkMode ? '#0071bc' : '#FF99CE',
+    primary4: darkMode ? '#0071bc' : '#F6DDE8',
     primary5: darkMode ? '#0071bc' : '#627eea',
 
     // color text

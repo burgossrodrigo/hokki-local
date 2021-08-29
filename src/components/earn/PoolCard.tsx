@@ -7,9 +7,9 @@ import DoubleCurrencyLogo from '../DoubleLogo'
 import { JSBI } from '@uniswap/sdk'
 import { ButtonPrimary } from '../Button'
 import { StakingInfo } from '../../state/stake/hooks'
-import { useColor } from '../../hooks/useColor'
+//import { useColor } from '../../hooks/useColor'
 import { currencyId } from '../../utils/currencyId'
-import { Break, CardNoise, CardBGImage } from './styled'
+import { Break } from './styled'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
 // import useBUSDPrice from '../../hooks/useBUSDPrice'
 //import useUSDCPrice from '../../utils/useUSDCPrice'
@@ -47,8 +47,9 @@ const Wrapper = styled(AutoColumn)<{ showBackground: boolean; bgColor: any }>`
   position: relative;
   opacity: ${({ showBackground }) => (showBackground ? '1' : '1')};
   background: ${({ theme, bgColor, showBackground }) =>
-    `radial-gradient(91.85% 100% at 1.84% 0%, ${bgColor} 0%, ${showBackground ? theme.black : theme.bg5} 100%) `};
-  color: ${({ theme, showBackground }) => (showBackground ? theme.white : theme.text1)} !important;
+  `${bgColor}`};
+  color: ${({ theme, showBackground }) => (showBackground ? '#BFBFBF' : theme.text1)} !important;
+
 
   ${({ showBackground }) =>
     showBackground &&
@@ -91,12 +92,11 @@ export default function PoolCard({ stakingInfo, isArchived }: { stakingInfo: Sta
   const token1 = stakingInfo.tokens[1]
   const currency0 = unwrappedToken(token0)
   const currency1 = unwrappedToken(token1)
-  const backgroundColor = useColor(stakingInfo?.baseToken)
+  const backgroundColor = '#000'
 
   return (
     <Wrapper showBackground={isStaking} bgColor={backgroundColor}>
-      <CardBGImage desaturate />
-      <CardNoise />
+
 
       <TopSection>
         <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={24} />
@@ -142,8 +142,8 @@ export default function PoolCard({ stakingInfo, isArchived }: { stakingInfo: Sta
             {stakingInfo
               ? stakingInfo.active
                 ? `${stakingInfo.poolRewardsPerBlock.toSignificant(4, { groupSeparator: ',' })} 
-                ${govToken?.symbol} / block`
-                : `0 ${govToken?.symbol} / block`
+                ${govToken?.symbol} / Block`
+                : `0 ${govToken?.symbol} / Block`
               : '-'}
           </TYPE.white>
         </RowBetween>
