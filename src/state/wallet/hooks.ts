@@ -49,9 +49,11 @@ export function useETHBalances(
 /**
  * Returns a map of token addresses to their eventually consistent token balances for a single account.
  */
-export function useTokenBalancesWithLoadingIndicator(
+ export function useTokenBalancesWithLoadingIndicator(
   address?: string,
-  tokens?: (Token | undefined)[]
+  tokens?: (Token | undefined)[],
+  method = 'balanceOf',
+  tokenInterface = ERC20_INTERFACE
 ): [{ [tokenAddress: string]: TokenAmount | undefined }, boolean] {
   const validatedTokens: Token[] = useMemo(
     () => tokens?.filter((t?: Token): t is Token => isAddress(t?.address) !== false) ?? [],
@@ -60,7 +62,7 @@ export function useTokenBalancesWithLoadingIndicator(
 
   const validatedTokenAddresses = useMemo(() => validatedTokens.map(vt => vt.address), [validatedTokens])
 
-  const balances = useMultipleContractSingleData(validatedTokenAddresses, ERC20_INTERFACE, 'balanceOf', [address])
+  const balances = useMultipleContractSingleData(validatedTokenAddresses, tokenInterface, method, [address])
 
   const anyLoading: boolean = useMemo(() => balances.some(callState => callState.loading), [balances])
 
@@ -85,14 +87,21 @@ export function useTokenBalancesWithLoadingIndicator(
 
 export function useTokenBalances(
   address?: string,
-  tokens?: (Token | undefined)[]
+  tokens?: (Token | undefined)[],
+  method = 'balanceOf',
+  tokenInterface = ERC20_INTERFACE
 ): { [tokenAddress: string]: TokenAmount | undefined } {
-  return useTokenBalancesWithLoadingIndicator(address, tokens)[0]
+  return useTokenBalancesWithLoadingIndicator(address, tokens, method, tokenInterface)[0]
 }
 
 // get the balance for a single token/account combo
-export function useTokenBalance(account?: string, token?: Token): TokenAmount | undefined {
-  const tokenBalances = useTokenBalances(account, [token])
+export function useTokenBalance(
+  account?: string,
+  token?: Token,
+  method = 'balanceOf',
+  tokenInterface = ERC20_INTERFACE
+): TokenAmount | undefined {
+  const tokenBalances = useTokenBalances(account, [token], method, tokenInterface)
   if (!token) return undefined
   return tokenBalances[token.address]
 }
