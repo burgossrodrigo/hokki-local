@@ -10,23 +10,7 @@ export const PIT_POOLS: {
   [ChainId.MAINNET]: [
     {
       pid: 0,
-      tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'WONE/BUSD')
-    },
-    {
-      pid: 1,
-      tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'WONE/VIPER')
-    },
-    {
-      pid: 2,
-      tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'WONE/1ETH')
-    },
-    {
-      pid: 3,
-      tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'BUSD/VIPER')
-    },
-    {
-      pid: 4,
-      tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'BUSD/bscBUSD')
+      tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'HOKK/WETH')
     }
   ],
   [ChainId.ROPSTEN]: [
