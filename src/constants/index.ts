@@ -69,6 +69,14 @@ export const PIT: { [chainId in ChainId]: Token } = {
 
 }
 
+export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
+  [ChainId.MAINNET]: { name: 'Dog Park', path: '/Dogpark' },
+  [ChainId.RINKEBY]: { name: '', path: '' },
+  [ChainId.ROPSTEN]: { name: 'Dog Park', path: '/Dogpark' },
+  [ChainId.GÖRLI]: { name: '', path: '' },
+  [ChainId.KOVAN]: { name: '', path: '' }
+}
+
 export const GOVERNANCE_TOKEN: { [chainId in ChainId]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, "0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E", 18, 'HokkFi', 'HokkFi'),
   [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ADDRESS, 18, 'HokkFi', 'HokkFi'),

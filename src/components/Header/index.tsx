@@ -31,6 +31,7 @@ import ClaimModal from '../claim/ClaimModal'
 import Modal from '../Modal'
 import UniBalanceContent from './UniBalanceContent'
 import { ButtonPrimary } from '../../components/Button'
+import { PIT_SETTINGS } from '../../constants'
 // import usePrevious from '../../hooks/usePrevious'
 
 const HeaderFrame = styled.div`
@@ -304,6 +305,7 @@ const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
 
 export default function Header() {
   const { account, chainId } = useActiveWeb3React()
+  const pitSettings = chainId ? PIT_SETTINGS[chainId] : undefined
   const { t } = useTranslation()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
@@ -353,13 +355,16 @@ export default function Header() {
           >
             {t('pool')}
           </StyledNavLink>
+          <StyledNavLink id={`stake-nav-link`} to={`${pitSettings?.path}`}>
+            {pitSettings?.name}
+          </StyledNavLink>
           <ResponsiveButtonPrimary
                   id="join-pool-button"
                   as={Link}
                   padding="4px 14px"
                   borderRadius="12px"
             to='/staking'>
-            {t('Staking')}
+            {t('Farming')}
           </ResponsiveButtonPrimary>
         </HeaderLinks>
       </HeaderRow>
