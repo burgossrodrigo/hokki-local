@@ -364,7 +364,7 @@ export default function Header() {
                   padding="4px 14px"
                   borderRadius="12px"
             to='/staking'>
-            {t('Staking')}
+            {t('Farming')}
           </ResponsiveButtonPrimary>
         </HeaderLinks>
       </HeaderRow>

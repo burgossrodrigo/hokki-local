@@ -305,7 +305,7 @@ export default function Manage({
           <span role="img" aria-label="wizard-icon" style={{ marginRight: '8px' }}>
             ⭐️
           </span>
-          When you withdraw, the contract will automagically claim Hokki on your behalf!
+          When you withdraw, the contract will automagically claim HokkFi on your behalf!
         </TYPE.main>
 
         {!showAddLiquidityButton && (

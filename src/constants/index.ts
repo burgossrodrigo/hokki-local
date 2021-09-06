@@ -70,9 +70,9 @@ export const PIT: { [chainId in ChainId]: Token } = {
 }
 
 export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
-  [ChainId.MAINNET]: { name: 'HokkFiPit', path: '/HokkFiPit' },
+  [ChainId.MAINNET]: { name: 'Dog Park', path: '/Dogpark' },
   [ChainId.RINKEBY]: { name: '', path: '' },
-  [ChainId.ROPSTEN]: { name: 'HokkFiPit', path: '/HokkFiPit' },
+  [ChainId.ROPSTEN]: { name: 'Dog Park', path: '/Dogpark' },
   [ChainId.GÖRLI]: { name: '', path: '' },
   [ChainId.KOVAN]: { name: '', path: '' }
 }
