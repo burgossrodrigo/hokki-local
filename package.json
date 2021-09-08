@@ -122,6 +122,11 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@kishu-inu/kishu-token-list": "^1.0.1"
+    "@binance-chain/bsc-connector": "^1.0.0",
+    "@keystonehq/keystone-connector": "^0.8.7",
+    "@kishu-inu/kishu-token-list": "^1.0.1",
+    "@sushiswap/sdk": "^5.0.0-canary.68",
+    "@web3-react/lattice-connector": "^6.1.9",
+    "@web3-react/torus-connector": "^6.1.9"
   }
 }
