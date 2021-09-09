@@ -1,4 +1,4 @@
-import { ChainId, SUSHI_ADDRESS, Token, WETH9, WNATIVE } from '@sushiswap/sdk'
+import { ChainId, SUSHI_ADDRESS, Token } from '@sushiswap/sdk'
 
 
 
@@ -24,12 +24,7 @@ export const CREAM = new Token(ChainId.MAINNET, '0x2ba592F78dB6436527729929AAf6c
 export const DAI = new Token(ChainId.MAINNET, '0x6b175474e89094c44da98b954eedeac495271d0f', 18, 'DAI', 'Dai Stablecoin')
 export const DOUGH = new Token(ChainId.MAINNET, '0xad32A8e6220741182940c5aBF610bDE99E737b2D', 18, 'DOUGH', 'PieDAO Dough v2')
 export const DUCK = new Token(ChainId.MAINNET, '0x92E187a03B6CD19CB6AF293ba17F2745Fd2357D5', 18, 'DUCK', 'DUCK')
-export const ETH2X_FLI = new Token(
-  ChainId.MAINNET,
-  '0xAa6E8127831c9DE45ae56bB1b0d4D4Da6e5665BD',
-  18,
-  'ETH2x-FLI',
-  'ETH 2x Flexible Leverage Index'
+export const ETH2X_FLI = new Token(ChainId.MAINNET, '0xAa6E8127831c9DE45ae56bB1b0d4D4Da6e5665BD', 18, 'ETH2x-FLI', 'ETH 2x Flexible Leverage Index'
 )
 export const FEI = new Token(ChainId.MAINNET, '0x956F47F50A910163D8BF957Cf5846D573E7f87CA', 18, 'FEI', 'Fei USD')
 export const FRAX = new Token(ChainId.MAINNET, '0x853d955aCEf822Db058eb8505911ED77F175b99e', 18, 'FRAX', 'FRAX')
@@ -132,11 +127,11 @@ type ChainTokenMap = {
 }
 
 // SUSHI
-export const SUSHI: ChainTokenMap = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, SUSHI_ADDRESS[ChainId.MAINNET], 18, 'SUSHI', 'SushiToken'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, SUSHI_ADDRESS[ChainId.ROPSTEN], 18, 'SUSHI', 'SushiToken'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, SUSHI_ADDRESS[ChainId.RINKEBY], 18, 'SUSHI', 'SushiToken'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, SUSHI_ADDRESS[ChainId.GÖRLI], 18, 'SUSHI', 'SushiToken'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, SUSHI_ADDRESS[ChainId.KOVAN], 18, 'SUSHI', 'SushiToken'),
-  [ChainId.BSC]: new Token(ChainId.BSC, SUSHI_ADDRESS[ChainId.BSC], 18, 'SUSHI', 'SushiToken'),
+export const HOKK: ChainTokenMap = {
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e', 18, 'HOKK', 'Hokkaidu Inu'),
+  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, '0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e', 18, 'HOKK', 'Hokkaidu InU'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e', 18, 'HOKK', 'Hokkaidu Inu'),
+  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, '0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e', 18, 'HOKK', 'Hokkaidu Inu'),
+  [ChainId.KOVAN]: new Token(ChainId.KOVAN, '0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e', 18, 'HOKK', 'Hokkaidu Inu'),
+  [ChainId.BSC]: new Token(ChainId.BSC, '0xc40af1e4fecfa05ce6bab79dcd8b373d2e436c4e', 18, 'HOKK', 'Hokkaidu Inu'),
 }

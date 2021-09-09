@@ -27,7 +27,6 @@ import {
   RENBTC,
   RUNE,
   STETH,
-  SUSHI,
   UMA,
   USDC,
   USDP,
@@ -35,6 +34,7 @@ import {
   UST,
   WBTC,
   XSUSHI,
+  HOKK
 } from './tokens'
 // a list of tokens by chain
 import { ChainId, Token, WNATIVE } from '@sushiswap/sdk'
@@ -163,7 +163,7 @@ export const PINNED_PAIRS: {
   readonly [chainId in ChainId]?: [Token, Token][]
 } = {
   [ChainId.MAINNET]: [
-    [SUSHI[ChainId.MAINNET], WNATIVE[ChainId.MAINNET]],
+    [HOKK[ChainId.MAINNET], WNATIVE[ChainId.MAINNET]],
     [
       new Token(ChainId.MAINNET, '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643', 8, 'cDAI', 'Compound Dai'),
       new Token(ChainId.MAINNET, '0x39AA39c021dfbaE8faC545936693aC917d5E7563', 8, 'cUSDC', 'Compound USD Coin'),
