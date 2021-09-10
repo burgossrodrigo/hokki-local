@@ -26,6 +26,25 @@ export const DOUGH = new Token(
   'PieDAO Dough v2'
 )
 
+export const AXSUSHI = new Token(
+  ChainId.MAINNET,
+  '0xf256cc7847e919fac9b808cc216cac87ccf2f47a',
+  18,
+  'aXSUSHI',
+  'Aave interest bearing XSUSHI'
+)
+
+export const CRXSUSHI = new Token(
+  ChainId.MAINNET,
+  '0x228619cca194fbe3ebeb2f835ec1ea5080dafbb2',
+  8,
+  'crXSUSHI',
+  'Cream SushiBar'
+)
+
+export const XSUSHI = new Token(ChainId.MAINNET, '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272', 18, 'xSUSHI', 'SushiBar')
+export const MEOW = new Token(ChainId.MAINNET, '0x650F44eD6F1FE0E1417cb4b3115d52494B4D9b6D', 18, 'MEOW', 'Meowshi')
+
 export const SHIB = new Token(ChainId.MAINNET, '0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce', 18, 'SHIB', 'Shiba Inu')
 
 export const USDC = new Token(ChainId.MAINNET, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 6, 'USDC', 'USD Coin')
