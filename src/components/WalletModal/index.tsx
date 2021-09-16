@@ -7,8 +7,7 @@ import ReactGA from 'react-ga'
 import styled from 'styled-components'
 import MetamaskIcon from '../../assets/images/metamask.png'
 import { ReactComponent as Close } from '../../assets/images/x.svg'
-import { fortmatic, injected, portis } from '../../connectors'
-import { OVERLAY_READY } from '../../connectors/Fortmatic'
+import { injected, portis } from '../../connectors'
 import { SUPPORTED_WALLETS } from '../../constants'
 import usePrevious from '../../hooks/usePrevious'
 import { ApplicationModal } from '../../state/application/actions'
@@ -196,11 +195,7 @@ export default function WalletModal({
   }
 
   // close wallet modal if fortmatic modal is active
-  useEffect(() => {
-    fortmatic.on(OVERLAY_READY, () => {
-      toggleWalletModal()
-    })
-  }, [toggleWalletModal])
+
 
   // get wallets user can switch too, depending on device/browser
   function getOptions() {
@@ -298,7 +293,7 @@ export default function WalletModal({
           <HeaderRow>{error instanceof UnsupportedChainIdError ? 'Wrong Network' : 'Error connecting'}</HeaderRow>
           <ContentWrapper>
             {error instanceof UnsupportedChainIdError ? (
-              <h5>Please connect to the appropriate Ethereum network.</h5>
+              <h5>Please connect to the appropriate BSC network.</h5>
             ) : (
               'Error connecting. Try refreshing the page.'
             )}
@@ -350,10 +345,12 @@ export default function WalletModal({
             <OptionGrid>{getOptions()}</OptionGrid>
           )}
           {walletView !== WALLET_VIEWS.PENDING && (
-            <Blurb>
-              <span>New to Ethereum? &nbsp;</span>{' '}
-              <ExternalLink href="https://ethereum.org/wallets/">Learn more about wallets</ExternalLink>
-            </Blurb>
+        <Blurb>
+        <span>New to BSC? &nbsp;</span>{' '}
+          <ExternalLink href="https://docs.binance.org/smart-chain/wallet/metamask.html">
+              Learn more about wallets
+          </ExternalLink>
+        </Blurb>
           )}
         </ContentWrapper>
       </UpperSection>

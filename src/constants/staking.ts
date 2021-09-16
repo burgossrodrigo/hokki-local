@@ -33,17 +33,5 @@ export const STAKING_REWARDS_INFO: {
       tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'BUSD/VIPER'),
       active: true
     },
-  ],
-  [ChainId.ROPSTEN]: [
-    {
-    pid: 0,
-    tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'Hokk/WETH'),
-    active: true
-  },
-  {
-    pid: 1,
-    tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'HokkFi/WETH'),
-    active: true
-  }
- ]
+  ]
 }

@@ -99,9 +99,5 @@ export class Tokens {
 }
 
 export const TOKENS: { [chainId in ChainId]: Tokens } = {
-  [ChainId.MAINNET]: new Tokens(ChainId.MAINNET),
-  [ChainId.ROPSTEN]: new Tokens(ChainId.ROPSTEN),
-  [ChainId.RINKEBY]: new Tokens(ChainId.RINKEBY),
-  [ChainId.GÖRLI]: new Tokens(ChainId.GÖRLI),
-  [ChainId.KOVAN]: new Tokens(ChainId.KOVAN)
+  [ChainId.MAINNET]: new Tokens(ChainId.MAINNET)
 }

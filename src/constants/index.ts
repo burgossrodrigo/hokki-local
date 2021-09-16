@@ -1,7 +1,7 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@uniswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
-import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
+import { injected, portis, walletconnect, walletlink, bsc } from '../connectors'
 
 export const ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
 
@@ -30,59 +30,35 @@ export const AVERAGE_BLOCK_TIME_IN_SECS = 13
 export const PROPOSAL_LENGTH_IN_BLOCKS = 40_320
 export const PROPOSAL_LENGTH_IN_SECS = AVERAGE_BLOCK_TIME_IN_SECS * PROPOSAL_LENGTH_IN_BLOCKS
 
-export const GOVERNANCE_ADDRESS = '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
+export const GOVERNANCE_ADDRESS = '0x36a92f809da8c2072b090a9e3322226c5376b207'
 
-export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
+export const TIMELOCK_ADDRESS = '0xa1f482dc58145ba2210bc21878ca34000e2e8fe4'
 
 // const UNI_ADDRESS = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
-const UNI_ADDRESS = '0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E'
+const UNI_ADDRESS = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
 export const UNI: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, "0x927dE6686859E23745F03Aa0DFaE1783fE932393", 18, 'UNI', 'Uniswap'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, UNI_ADDRESS, 18, 'UNI', 'Uniswap'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, UNI_ADDRESS, 18, 'UNI', 'Uniswap')
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'BNB', 'Wrapped BNB')
 }
 
 export const MASTER_BREEDER: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: "0x8E7Cfa9685935fd87562E5749eFCAF64Eef61DD6",
-  [ChainId.RINKEBY]: ZERO_ADDRESS,
-  [ChainId.ROPSTEN]: "0x5c72fedb007a553916ceea172c70f7f1f9aa514c",
-  [ChainId.GÖRLI]: ZERO_ADDRESS,
-  [ChainId.KOVAN]: ZERO_ADDRESS,
 }
 
 export const PIT_BREEDER: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: "0x38a75B033c2C3444Cb91D580645F76d042F98EdA",
-  [ChainId.RINKEBY]: ZERO_ADDRESS,
-  [ChainId.ROPSTEN]: "0x66Ffcd599be52aAD6d339F91f36a0419FCDe7018",
-  [ChainId.GÖRLI]: ZERO_ADDRESS,
-  [ChainId.KOVAN]: ZERO_ADDRESS,
 }
 
 export const PIT: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, "0x561487C0d886E856A1078c4AeB326CD7bBCfFC3f", 18, 'HokkFi', 'HokkFi'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit'),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit')
 
 }
 
 export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
-  [ChainId.MAINNET]: { name: 'Dog Park', path: '/Dogpark' },
-  [ChainId.RINKEBY]: { name: '', path: '' },
-  [ChainId.ROPSTEN]: { name: 'Dog Park', path: '/Dogpark' },
-  [ChainId.GÖRLI]: { name: '', path: '' },
-  [ChainId.KOVAN]: { name: '', path: '' }
+  [ChainId.MAINNET]: { name: 'Dog Park', path: '/Dogpark' }
 }
 
 export const GOVERNANCE_TOKEN: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, "0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E", 18, 'HokkFi', 'HokkFi'),
-  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, ZERO_ADDRESS, 18, 'HokkFi', 'HokkFi'),
-  [ChainId.ROPSTEN]: new Token(ChainId.ROPSTEN, "0x927dE6686859E23745F03Aa0DFaE1783fE932393", 18, 'HokkFi', 'HokkFi'),
-  [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, ZERO_ADDRESS, 18, 'VIPER', 'Viper'),
-  [ChainId.KOVAN]: new Token(ChainId.KOVAN, ZERO_ADDRESS, 18, 'VIPER', 'Viper'),
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, "0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E", 18, 'HokkFi', 'HokkFi')
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
@@ -98,10 +74,6 @@ export const MERKLE_DISTRIBUTOR_ADDRESS: { [chainId in ChainId]?: string } = {
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
-  [ChainId.ROPSTEN]: [WETH[ChainId.ROPSTEN]],
-  [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
-  [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
-  [ChainId.KOVAN]: [WETH[ChainId.KOVAN]]
 }
 
 // used to construct intermediary pairs for trading
@@ -212,13 +184,13 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     mobile: true,
     mobileOnly: true
   },
-  FORTMATIC: {
-    connector: fortmatic,
-    name: 'Fortmatic',
-    iconName: 'fortmaticIcon.png',
-    description: 'Login using Fortmatic hosted wallet',
+  BSC: {
+    connector: bsc,
+    name: 'Binance Smart Chain Wallet',
+    iconName: 'binancelogo.png',
+    description: 'Login using Binance Smart Chain wallet',
     href: null,
-    color: '#6748FF',
+    color: '#FFFF00',
     mobile: true
   },
   Portis: {

@@ -3,13 +3,11 @@ import { InjectedConnector } from '@web3-react/injected-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
 import { PortisConnector } from '@web3-react/portis-connector'
-
-import { FortmaticConnector } from './Fortmatic'
 import { NetworkConnector } from './NetworkConnector'
 import UNISWAP_LOGO_URL from '../assets/svg/logo.svg'
+import { BscConnector } from './bsc/bscConnectors'
 
-const NETWORK_URL = process.env.REACT_APP_NETWORK_URL
-const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
+const NETWORK_URL = 'https://frosty-spring-sun.bsc.quiknode.pro/c1af3ff53b7887bb8107c6759f78c10c865e5672/'
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
 const WALLETCONNECT_BRIDGE_URL = process.env.REACT_APP_WALLETCONNECT_BRIDGE_URL
 
@@ -29,8 +27,10 @@ export function getNetworkLibrary(): Web3Provider {
 }
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [1, 3, 4, 5, 42]
+  supportedChainIds: [56]
 })
+
+export const bsc = new BscConnector({ supportedChainIds: [56] })
 
 // mainnet only
 export const walletconnect = new WalletConnectConnector({
@@ -40,21 +40,17 @@ export const walletconnect = new WalletConnectConnector({
   pollingInterval: 15000
 })
 
-// mainnet only
-export const fortmatic = new FortmaticConnector({
-  apiKey: FORMATIC_KEY ?? '',
-  chainId: 1
-})
+
 
 // mainnet only
 export const portis = new PortisConnector({
-  dAppId: PORTIS_ID ?? '',
-  networks: [1]
+  dAppId: PORTIS_ID ?? '7956f7d7-de01-4db8-9c9f-41e56f903d23',
+  networks: [56]
 })
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
   url: NETWORK_URL,
-  appName: 'Uniswap',
+  appName: 'Hokkfi',
   appLogoUrl: UNISWAP_LOGO_URL
 })

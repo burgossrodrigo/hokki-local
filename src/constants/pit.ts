@@ -12,11 +12,5 @@ export const PIT_POOLS: {
       pid: 0,
       tokens: getPairTokensWithDefaults(ChainId.MAINNET, 'HOKK/WETH')
     }
-  ],
-  [ChainId.ROPSTEN]: [
-    {
-      pid: 0,
-      tokens: getPairTokensWithDefaults(ChainId.ROPSTEN, 'HOKK/WETH')
-    }
   ]
 }
