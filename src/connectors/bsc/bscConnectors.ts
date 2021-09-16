@@ -4,6 +4,8 @@ import warning from 'tiny-warning'
 
 import { SendReturnResult, SendReturn, Send, SendOld } from './types'
 
+declare var window: any
+
 function parseSendReturn(sendReturn: SendReturnResult | SendReturn): any {
   // eslint-disable-next-line no-prototype-builtins
   return sendReturn.hasOwnProperty('result') ? sendReturn.result : sendReturn

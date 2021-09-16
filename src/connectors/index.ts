@@ -45,7 +45,7 @@ export const walletconnect = new WalletConnectConnector({
 // mainnet only
 export const portis = new PortisConnector({
   dAppId: PORTIS_ID ?? '7956f7d7-de01-4db8-9c9f-41e56f903d23',
-  networks: [56]
+  networks: [1]
 })
 
 // mainnet only

@@ -18,14 +18,6 @@
       "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
     },
     {
-      "name": "Hokkaidu Inu",
-      "address": "0x36a92f809da8c2072b090a9e3322226c5376b207",
-      "symbol": "HOKK",
-      "decimals": 9,
-      "chainId": 3,
-      "logoURI": "https://www.hokk.finance/static/img/hokk-mascot.png"
-    },
-    {
       "name": "SHIBA INU",
       "address": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
       "symbol": "SHIB",
