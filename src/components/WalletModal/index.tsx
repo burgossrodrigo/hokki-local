@@ -19,6 +19,12 @@ import Modal from '../Modal'
 import Option from './Option'
 import PendingView from './PendingView'
 
+const ChainButton = styled.button`
+
+  background-color: white;
+
+`
+
 const CloseIcon = styled.div`
   position: absolute;
   right: 1rem;
@@ -319,6 +325,7 @@ export default function WalletModal({
         </CloseIcon>
         {walletView !== WALLET_VIEWS.ACCOUNT ? (
           <HeaderRow color="blue">
+            <ChainButton>Select Chain</ChainButton>
             <HoverText
               onClick={() => {
                 setPendingError(false)
@@ -330,6 +337,7 @@ export default function WalletModal({
           </HeaderRow>
         ) : (
           <HeaderRow>
+            <ChainButton>Select Chain</ChainButton>
             <HoverText>Connect to a wallet</HoverText>
           </HeaderRow>
         )}
@@ -362,4 +370,6 @@ export default function WalletModal({
       <Wrapper>{getModalContent()}</Wrapper>
     </Modal>
   )
+
+
 }

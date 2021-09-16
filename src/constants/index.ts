@@ -22,6 +22,7 @@ export const EOS = new Token(ChainId.MAINNET, '0x56b6fb708fc5732dec1afc8d8556423
 export const DOT = new Token(ChainId.MAINNET, '0x7083609fce4d1d8dc0c979aab8c869ea2c873402', 18, 'DOT', 'Polkadot Token')
 export const ETH = new Token(ChainId.MAINNET, '0x2170ed0880ac9a755fd29b2688956bd959f933f8', 18, 'ETH', 'Ethereum Token')
 export const BETH = new Token(ChainId.MAINNET, '0x250632378E573c6Be1AC2f97Fcdf00515d0Aa91B', 18, 'BETH', 'Binance Beacon Ethereum Token')
+export const USDC = new Token(ChainId.MAINNET, '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d', 18, 'USDC', 'Binance-Peg USD Coin')
 
 
 // Block time here is slightly higher (~1s) than average in order to avoid ongoing proposals past the displayed time
