@@ -35,9 +35,9 @@ export const GOVERNANCE_ADDRESS = '0x36a92f809da8c2072b090a9e3322226c5376b207'
 export const TIMELOCK_ADDRESS = '0xa1f482dc58145ba2210bc21878ca34000e2e8fe4'
 
 // const UNI_ADDRESS = '0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984'
-const UNI_ADDRESS = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+const UNI_ADDRESS = '0x36a92f809da8c2072b090a9e3322226c5376b207 '
 export const UNI: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'BNB', 'Wrapped BNB')
+  [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'HOKK', 'Hokkaido Inu')
 }
 
 export const MASTER_BREEDER: { [chainId in ChainId]: string } = {
