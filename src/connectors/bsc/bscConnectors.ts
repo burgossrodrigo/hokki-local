@@ -89,7 +89,7 @@ export class BscConnector extends AbstractConnector {
     // if unsuccessful, try enable
     if (!account) {
       // if enable is successful but doesn't return accounts, fall back to getAccount (not happy i have to do this...)
-      account = await window.BinanceChain.enable().then((sendReturn) => sendReturn && parseSendReturn(sendReturn)[0])
+      account = await window.BinanceChain.enable().then((sendReturn: any) => sendReturn && parseSendReturn(sendReturn)[0])
     }
 
     return { provider: window.BinanceChain, ...(account ? { account } : {}) }
@@ -158,7 +158,7 @@ export class BscConnector extends AbstractConnector {
 
     if (!account) {
       try {
-        account = await window.BinanceChain.enable().then((sendReturn) => parseSendReturn(sendReturn)[0])
+        account = await window.BinanceChain.enable().then((sendReturn: any) => parseSendReturn(sendReturn)[0])
       } catch {
         warning(false, 'enable was unsuccessful, falling back to eth_accounts v2')
       }

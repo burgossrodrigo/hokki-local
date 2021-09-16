@@ -8,72 +8,63 @@
   },
   "tags": {},
   "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E/logo.png",
-  "keywords": ["kishuswap"],
-  "tokens": [{
-      "name": "Wrapped Ether",
-      "address": "0x8d0e18c97e5dd8ee2b539ae8cd3a3654df5d79e5",
-      "symbol": "WETH",
-      "decimals": 18,
-      "chainId": 1,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+  "keywords": ["hokkswap"],
+  "tokens": [
+    {
+    "name": "WBNB Token",
+    "symbol": "WBNB",
+    "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+    "chainId": 1,
+    "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xae13d989dac2f0debff460ac112a837c89baa7cd/logo.png"
     },
     {
-      "name": "SHIBA INU",
-      "address": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
-      "symbol": "SHIB",
-      "decimals": 18,
-      "chainId": 1,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x95aD61b0a150d79219dCF64E1E6Cc01f0B64C4cE/logo.png"
-    },      
-    {
-
-      "name": "StarLink",
-      "address": "0x8e6cd950ad6ba651f6dd608dc70e5886b1aa6b24",
-      "symbol": "STARL",
-      "decimals": 18,
-      "chainId": 1,
-      "logoURI": "https://etherscan.io/token/images/starlinktoken_32.png"
-    },   
-             
-    {
-      "name": "Fat Doge",
-      "address": "0x76851a93977bea9264c32255b6457882035c7501",
-      "symbol": "FOGE",
+      "name": "Hokkaidu Inu",
+      "address": "0x36a92f809da8c2072b090a9e3322226c5376b207",
+      "symbol": "HOKK",
       "decimals": 9,
       "chainId": 1,
-      "logoURI": "https://i.ibb.co/ky4Bm6P/foge-32x32.png"
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x36a92f809da8c2072b090a9e3322226c5376b207/logo.png"
     },
     {
-      "name": "DOGE KILLER",
-      "address": "0x27c70cd1946795b66be9d954418546998b546634",
-      "symbol": "LEASH",
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "chainId": 1,
       "decimals": 18,
-      "chainId": 1,
-      "logoURI": "https://etherscan.io/token/images/dogekiller_32.png"
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xe9e7cea3dedca5984780bafc599bd69add087d56/logo.png"
     },
     {
-      "name": "Dai Stablecoin",
-      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
-      "symbol": "DAI",
+      "name": "Ethereum Token",
+      "symbol": "ETH",
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "chainId": 1,
       "decimals": 18,
-      "chainId": 1,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2170ed0880ac9a755fd29b2688956bd959f933f8/logo.png"
     },
     {
-      "name": "USDCoin",
-      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
-      "symbol": "USDC",
-      "decimals": 6,
-      "chainId": 1,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
-    },
-    {
-      "name": "Wrapped BTC",
+      "name": "BTCB Token",
+      "symbol": "BTCB",
       "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
-      "symbol": "WBTC",
-      "decimals": 8,
       "chainId": 1,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/logo.png"
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c/logo.png"
+    },
+    {
+      "name": "Bakery Token",
+      "symbol": "BAKE",
+      "address": "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
+      "chainId": 1,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5/logo.png"
+    },
+    {
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "chainId": 1,
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d/logo.png"
     }
   ]
 }
