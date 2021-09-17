@@ -1,3 +1,5 @@
+export {}
+/*
 import { useMemo } from 'react'
 import { TokenAmount, Fraction } from '@uniswap/sdk'
 import { useTokenBalance } from '../state/wallet/hooks'
@@ -21,3 +23,4 @@ export default function usePitTVL(): Fraction | undefined {
     return govTokenBusdPrice ? pitGovTokenBalance?.multiply(govTokenBusdPrice?.raw) : undefined
   }, [govTokenBusdPrice, pitGovTokenBalance])
 }
+*/  

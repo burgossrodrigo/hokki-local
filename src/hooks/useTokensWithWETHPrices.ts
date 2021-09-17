@@ -1,7 +1,5 @@
 import { WETH } from '@uniswap/sdk'
 import { useMemo } from 'react'
-import useGovernanceToken from './useGovernanceToken'
-import useTokenWethPrice from './useTokenWETHPrice'
 // import getToken from '../utils/getToken'
 import { useActiveWeb3React } from './index'
 
@@ -11,8 +9,6 @@ export default function useTokensWithWethPrices(): Record<string, any> {
 
   const weth = chainId && WETH[chainId]
 
-  const govToken = useGovernanceToken()
-  const govTokenWETHPrice = useTokenWethPrice(govToken)
 
   // const BUSDTicker = chainId !== ChainId.ROPSTEN ? 'BUSD' : 'BUSD'
   // const BUSD: Token | undefined = getToken(chainId, BUSDTicker)
@@ -32,7 +28,6 @@ export default function useTokensWithWethPrices(): Record<string, any> {
   return useMemo(() => {
     return {
       WETH: { token: weth, price: undefined },
-      govToken: { token: govToken, price: govTokenWETHPrice },
       // BUSD: { token: BUSD, price: BUSDWETHPrice },
       // USDC: { token: USDC, price: USDCWETHPrice },
       // bscBUSD: { token: bscBUSD, price: bscBUSDWETHPrice },
@@ -41,9 +36,7 @@ export default function useTokensWithWethPrices(): Record<string, any> {
   }, [
     // chainId,
     // blockchain,
-    weth,
-    govToken,
-    govTokenWETHPrice,
+    weth
     // BUSD,
     // BUSDWETHPrice,
     // USDC,

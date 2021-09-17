@@ -1,3 +1,4 @@
+
 import { UNI } from './../../constants/index'
 import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount } from '@uniswap/sdk'
 import { useMemo } from 'react'
@@ -8,7 +9,6 @@ import { useMulticallContract } from '../../hooks/useContract'
 import { isAddress } from '../../utils'
 import { useSingleContractMultipleData, useMultipleContractSingleData } from '../multicall/hooks'
 import { useUserUnclaimedAmount } from '../claim/hooks'
-import { useTotalUniEarned } from '../stake/hooks'
 
 /**
  * Returns a map of the given addresses to their eventually consistent ETH balances.
@@ -163,3 +163,7 @@ export function useAggregateUniBalance(): TokenAmount | undefined {
     )
   )
 }
+function useTotalUniEarned(): TokenAmount | undefined {
+  throw new Error('Function not implemented.')
+}
+

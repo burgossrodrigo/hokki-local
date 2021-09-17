@@ -35,7 +35,6 @@ export const CardBGImage = styled.span<{ desaturate?: boolean }>`
   left: -100px;
   transform: rotate(-15deg);
   user-select: none;
-
   ${({ desaturate }) => desaturate && `filter: saturate(0)`}
 `
 
@@ -49,7 +48,6 @@ export const CardBGImageSmaller = styled.span<{ desaturate?: boolean }>`
   left: -300px;
   opacity: 0.4;
   user-select: none;
-
   ${({ desaturate }) => desaturate && `filter: saturate(0)`}
 `
 

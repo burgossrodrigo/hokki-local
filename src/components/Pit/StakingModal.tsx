@@ -1,3 +1,5 @@
+export {}
+/*
 import React, { useState, useCallback } from 'react'
 import useTransactionDeadline from '../../hooks/useTransactionDeadline'
 import Modal from '../Modal'
@@ -22,14 +24,14 @@ import { calculateGasMargin } from '../../utils'
 import { PIT_SETTINGS } from '../../constants'
 import useGovernanceToken from '../../hooks/useGovernanceToken'
 
-/*const HypotheticalRewardRate = styled.div<{ dim: boolean }>`
+const HypotheticalRewardRate = styled.div<{ dim: boolean }>`
   display: flex;
   justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
 
   opacity: ${({ dim }) => (dim ? 0.5 : 1)};
-`*/
+
 
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;
@@ -206,3 +208,4 @@ export default function StakingModal({ isOpen, onDismiss, stakingToken, userLiqu
     </Modal>
   )
 }
+*/

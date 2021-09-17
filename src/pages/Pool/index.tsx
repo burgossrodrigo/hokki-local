@@ -1,3 +1,5 @@
+export {}
+/*
 import React, { useContext, useMemo } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import { Pair, JSBI } from '@uniswap/sdk'
@@ -19,7 +21,7 @@ import { usePairs } from '../../data/Reserves'
 import { toV2LiquidityToken, useTrackedTokenPairs } from '../../state/user/hooks'
 import { Dots } from '../../components/swap/styleds'
 import { CardSection, DataCard } from '../../components/earn/styled'
-import { useStakingInfo } from '../../state/stake/hooks'
+
 import { BIG_INT_ZERO } from '../../constants'
 
 const PageWrapper = styled(AutoColumn)`
@@ -31,7 +33,7 @@ const PageWrapper = styled(AutoColumn)`
 //   background: radial-gradient(76.02% 75.41% at 1.84% 0%, #27ae60 0%, #000000 100%);
 //   overflow: hidden;
 // `
-
+/*
 const TitleRow = styled(RowBetween)`
   ${({ theme }) => theme.mediaWidth.upToSmall`
     flex-wrap: wrap;
@@ -236,3 +238,5 @@ export default function Pool() {
     </>
   )
 }
+
+*/

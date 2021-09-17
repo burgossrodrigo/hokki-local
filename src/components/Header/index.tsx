@@ -6,7 +6,7 @@ import { Text } from 'rebass'
 import { NavLink } from 'react-router-dom'
 import { darken } from 'polished'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+/* import { Link } from 'react-router-dom' */
 
 import styled from 'styled-components'
 
@@ -30,8 +30,7 @@ import ClaimModal from '../claim/ClaimModal'
 // import { useUserHasAvailableClaim } from '../../state/claim/hooks'
 import Modal from '../Modal'
 import UniBalanceContent from './UniBalanceContent'
-import { ButtonPrimary } from '../../components/Button'
-import { PIT_SETTINGS } from '../../constants'
+/* import { ButtonPrimary } from '../../components/Button' */
 // import usePrevious from '../../hooks/usePrevious'
 
 const HeaderFrame = styled.div`
@@ -289,12 +288,13 @@ export const StyledMenuButton = styled.button`
     stroke: ${({ theme }) => theme.text1};
   }
 `
-const ResponsiveButtonPrimary = styled(ButtonPrimary)`
+/* const ResponsiveButtonPrimary = styled(ButtonPrimary)`
   width: fit-content;
   ${({ theme }) => theme.mediaWidth.upToSmall`
     width: 48%;
   `};
 `
+*/
 
 const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
  
@@ -302,7 +302,6 @@ const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
 
 export default function Header() {
   const { account, chainId } = useActiveWeb3React()
-  const pitSettings = chainId ? PIT_SETTINGS[chainId] : undefined
   const { t } = useTranslation()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
@@ -352,17 +351,14 @@ export default function Header() {
           >
             {t('pool')}
           </StyledNavLink>
-          <StyledNavLink id={`stake-nav-link`} to={`${pitSettings?.path}`}>
-            {pitSettings?.name}
-          </StyledNavLink>
-          <ResponsiveButtonPrimary
+          {/*<ResponsiveButtonPrimary
                   id="join-pool-button"
                   as={Link}
                   padding="4px 14px"
                   borderRadius="12px"
             to='/staking'>
             {t('Farming')}
-          </ResponsiveButtonPrimary>
+          </ResponsiveButtonPrimary> */}
         </HeaderLinks>
       </HeaderRow>
       <HeaderControls>

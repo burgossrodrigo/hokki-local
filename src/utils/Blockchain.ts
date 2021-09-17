@@ -4,5 +4,6 @@ import JSBI from 'jsbi'
 export type BigintIsh = JSBI | bigint | string
 
 export enum Blockchain {
-  BINANCE_SMART_CHAIN = 1
+  BINANCE_SMART_CHAIN = 1,
+  TESTNET_SMART_CHAIN = 2
 }

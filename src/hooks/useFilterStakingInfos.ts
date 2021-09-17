@@ -1,3 +1,5 @@
+export {}
+/*
 import { useMemo } from 'react'
 import { StakingInfo } from '../state/stake/hooks'
 
@@ -35,3 +37,4 @@ export default function useFilterStakingInfos(
     })
   }, [stakingInfos, isActive, onlyStaked])
 }
+*/

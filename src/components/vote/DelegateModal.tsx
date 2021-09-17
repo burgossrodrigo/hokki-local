@@ -1,3 +1,5 @@
+export {}
+/*
 import React, { useState } from 'react'
 
 import Modal from '../Modal'
@@ -131,3 +133,4 @@ export default function DelegateModal({ isOpen, onDismiss, title }: VoteModalPro
     </Modal>
   )
 }
+*/

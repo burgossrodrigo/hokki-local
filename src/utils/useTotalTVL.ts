@@ -1,3 +1,5 @@
+export {}
+/*
 import { useMemo } from 'react'
 import { Fraction, JSBI } from '@uniswap/sdk'
 import { StakingInfo } from '../state/stake/hooks'
@@ -14,3 +16,4 @@ export default function useTotalTVL(stakingInfos: StakingInfo[]): Fraction {
     }, new Fraction(JSBI.BigInt(0), JSBI.BigInt(1)))
   }, [stakingInfos])
 }
+*/

@@ -1,3 +1,5 @@
+export {}
+/*
 import React, { useState, useContext } from 'react'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -142,3 +144,4 @@ export default function VoteModal({ isOpen, onDismiss, proposalId, support }: Vo
     </Modal>
   )
 }
+*/

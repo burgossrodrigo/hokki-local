@@ -1,3 +1,5 @@
+export {}
+/*
 import { JSBI, Token, TokenAmount } from '@uniswap/sdk'
 import { BigNumber } from 'ethers'
 import { STAKING_GENESIS } from '../state/stake/hooks'
@@ -110,3 +112,4 @@ export function computeUniCirculation(
   const total = new TokenAmount(uni, JSBI.multiply(wholeAmount, JSBI.exponentiate(JSBI.BigInt(10), JSBI.BigInt(18))))
   return unclaimedUni ? total.subtract(unclaimedUni) : total
 }
+*/

@@ -40,27 +40,6 @@ export const UNI: { [chainId in ChainId]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'UNI ', 'Binance-Peg Uniswap')
 }
 
-export const MASTER_BREEDER: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: "0x8E7Cfa9685935fd87562E5749eFCAF64Eef61DD6",
-}
-
-export const PIT_BREEDER: { [chainId in ChainId]: string } = {
-  [ChainId.MAINNET]: "0x38a75B033c2C3444Cb91D580645F76d042F98EdA",
-}
-
-export const PIT: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, ZERO_ADDRESS, 18, 'xVIPER', 'ViperPit')
-
-}
-
-export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
-  [ChainId.MAINNET]: { name: 'Dog Park', path: '/Dogpark' }
-}
-
-export const GOVERNANCE_TOKEN: { [chainId in ChainId]: Token } = {
-  [ChainId.MAINNET]: new Token(ChainId.MAINNET, "0xC40AF1E4fEcFA05Ce6BAb79DcD8B373d2E436c4E", 18, 'HokkFi', 'HokkFi')
-}
-
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
   [UNI_ADDRESS]: 'UNI',
   [GOVERNANCE_ADDRESS]: 'Governance',
@@ -80,11 +59,6 @@ const WETH_ONLY: ChainTokenList = {
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WETH_ONLY,
   [ChainId.MAINNET]: [...WETH_ONLY[ChainId.MAINNET], DAI, USDT]
-}
-
-export const ADDITIONAL_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
-  [ChainId.MAINNET]: {
-  }
 }
 
 /**
@@ -112,12 +86,24 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
-      new Token(ChainId.MAINNET, '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643', 8, 'cDAI', 'Compound Dai'),
-      new Token(ChainId.MAINNET, '0x39AA39c021dfbaE8faC545936693aC917d5E7563', 8, 'cUSDC', 'Compound USD Coin')
+      new Token(ChainId.MAINNET, '0x36a92f809da8c2072b090a9e3322226c5376b207', 18, 'HOKK', 'Hokkaido Inu'),
+      new Token(ChainId.MAINNET, '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c', 18, 'WBNB', 'Wrapped BNB')
     ],
     [BUSD, USDT],
     [DAI, USDT]
   ]
+}
+
+export const ADDITIONAL_BASES: { [chainId in ChainId]?: { [tokenAddress: string]: Token[] } } = {
+  [ChainId.MAINNET]: {
+    '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c': [new Token(ChainId.MAINNET, UNI_ADDRESS, 18, 'WBNB', 'Wrapped BNB')],
+    [HOKK.address]: [DAI],
+    [DAI.address]: [HOKK],
+    [HOKK.address]: [BUSD],
+    [BUSD.address]: [HOKK],
+    [HOKK.address]: [USDT],
+    [USDT.address]: [HOKK]
+  }
 }
 
 export interface WalletInfo {

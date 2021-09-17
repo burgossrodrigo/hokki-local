@@ -1,3 +1,5 @@
+export {}
+/*
 import React, { useState, useMemo } from 'react'
 import Modal from '../Modal'
 import { AutoColumn } from '../Column'
@@ -185,3 +187,4 @@ export default function ClaimModal({ isOpen, onDismiss }: ClaimModalProps) {
     </Modal>
   )
 }
+*/

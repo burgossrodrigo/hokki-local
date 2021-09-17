@@ -1,3 +1,5 @@
+export {}
+/*
 import React, { useState, useCallback } from 'react'
 import Modal from '../Modal'
 import { AutoColumn } from '../Column'
@@ -20,14 +22,14 @@ import { PIT_SETTINGS } from '../../constants'
 import useGovernanceToken from '../../hooks/useGovernanceToken'
 import usePitToken from '../../hooks/usePitToken'
 
-/*const HypotheticalRewardRate = styled.div<{ dim: boolean }>`
+const HypotheticalRewardRate = styled.div<{ dim: boolean }>`
   display: flex;
   justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
 
   opacity: ${({ dim }) => (dim ? 0.5 : 1)};
-`*/
+
 
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;
@@ -181,3 +183,4 @@ export default function ModifiedStakingModal({
     </Modal>
   )
 }
+*/
